@@ -7,5 +7,9 @@ bot = telebot.TeleBot(API_TOKEN)
 def start(message):
     bot.send_message(message.chat.id, 'Здарова ебать!\nЧе опять надо?')
 
+@bot.message_handler(commands = ['bullshit'])
+def start(message):
+    bot.send_message(message.chat.id, 'На кого быкануть?')
+
 bot.polling(none_stop=True)
 
